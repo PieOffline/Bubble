@@ -17,7 +17,7 @@ Bubble/
     ├── BubbleVPN.csproj    # Project configuration
     ├── Program.cs          # Application entry point
     ├── MainForm.cs         # Main UI form
-    ├── VPNService.cs       # BUBBL connection logic
+    ├── BUBBLService.cs     # BUBBL connection logic
     └── Properties/         # Project properties
         └── launchSettings.json
 ```
