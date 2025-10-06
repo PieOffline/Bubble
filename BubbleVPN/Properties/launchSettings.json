@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "BubbleVPN": {
-      "commandName": "Project",
-      "nativeDebugging": false
-    }
-  }
-}
