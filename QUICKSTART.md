@@ -1,4 +1,4 @@
-# Quick Start Guide - Bubble VPN Browser
+# Quick Start Guide - Bubble BUBBL Browser
 
 Get up and running in 5 minutes!
 
@@ -33,13 +33,13 @@ Option A: Start with debugging (recommended for first run)
 Option B: Start without debugging
 - Press **Ctrl+F5**
 
-The Bubble VPN Browser window will open!
+The Bubble BUBBL Browser window will open!
 
-## Step 4: Use the VPN Browser
+## Step 4: Use the BUBBL Browser
 
-### Enable VPN Protection
+### Enable BUBBL Protection
 1. Look at the top status bar
-2. Click the **"🛡️ Enable VPN"** button
+2. Click the **"🛡️ Enable BUBBL"** button
 3. A confirmation dialog will appear
 4. Click **OK**
 5. The status bar turns **green** ✓
@@ -51,13 +51,13 @@ The Bubble VPN Browser window will open!
 4. Your traffic is now obfuscated!
 
 ### View Statistics
-When VPN is enabled, you'll see real-time stats:
+When BUBBL is enabled, you'll see real-time stats:
 - ↑ Data sent
 - ↓ Data received  
 - ⏱ Connection time
 
-### Disable VPN
-1. Click the **"🛡️ Disable VPN"** button
+### Disable BUBBL
+1. Click the **"🛡️ Disable BUBBL"** button
 2. Status returns to disconnected
 
 ### Minimize to Tray
@@ -94,10 +94,10 @@ When VPN is enabled, you'll see real-time stats:
 
 | Feature | Description |
 |---------|-------------|
-| 🛡️ **VPN Toggle** | One-click enable/disable |
+| 🛡️ **BUBBL Toggle** | One-click enable/disable |
 | 🌐 **Full Browser** | Chromium-powered browsing |
 | 📊 **Statistics** | Real-time traffic monitoring |
-| 🔒 **Obfuscation** | Traffic protection when VPN on |
+| 🔒 **Obfuscation** | Traffic protection when BUBBL on |
 | 🔔 **Notifications** | Status updates in system tray |
 | ⚡ **Fast** | Native Windows performance |
 
@@ -121,7 +121,7 @@ When VPN is enabled, you'll see real-time stats:
 
 ✓ A complete Windows application  
 ✓ WebView2 browser integration  
-✓ VPN functionality with obfuscation  
+✓ BUBBL functionality with obfuscation  
 ✓ Modern UI with dark theme  
 ✓ System tray integration  
 ✓ Real-time statistics  
@@ -131,14 +131,14 @@ When VPN is enabled, you'll see real-time stats:
 
 After building, you can find the executable at:
 ```
-Bubble/BubbleVPN/bin/Debug/net8.0-windows/BubbleVPN.exe
+Bubble/BubbleBUBBL/bin/Debug/net8.0-windows/BubbleBUBBL.exe
 ```
 
 Double-click to run without Visual Studio!
 
 ---
 
-**Congratulations!** You now have a working VPN browser running from Visual Studio 2022. 🎉
+**Congratulations!** You now have a working BUBBL browser running from Visual Studio 2022. 🎉
 
 For more information, see:
 - [README.md](README.md) - Project overview

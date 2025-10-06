@@ -1,4 +1,4 @@
-# Build Instructions - Bubble VPN Browser
+# Build Instructions - Bubble BUBBL Browser
 
 ## Prerequisites
 
@@ -84,7 +84,7 @@ However, if you prefer VS Code:
 1. Install C# Dev Kit extension
 2. Open folder in VS Code
 3. Use Terminal to build: `dotnet build`
-4. Run: `dotnet run --project BubbleVPN`
+4. Run: `dotnet run --project BubbleBUBBL`
 
 ## Building from Command Line
 
@@ -127,7 +127,7 @@ dotnet build -c Release
 
 **Build and run:**
 ```cmd
-dotnet run --project BubbleVPN
+dotnet run --project BubbleBUBBL
 ```
 
 **Clean build:**
@@ -140,22 +140,22 @@ dotnet build
 
 ### Debug Build
 ```
-Bubble/BubbleVPN/bin/Debug/net8.0-windows/
-├── BubbleVPN.exe          (Main executable)
-├── BubbleVPN.dll
-├── BubbleVPN.pdb          (Debug symbols)
-├── BubbleVPN.deps.json
-├── BubbleVPN.runtimeconfig.json
+Bubble/BubbleBUBBL/bin/Debug/net8.0-windows/
+├── BubbleBUBBL.exe          (Main executable)
+├── BubbleBUBBL.dll
+├── BubbleBUBBL.pdb          (Debug symbols)
+├── BubbleBUBBL.deps.json
+├── BubbleBUBBL.runtimeconfig.json
 └── runtimes/              (WebView2 files)
 ```
 
 ### Release Build
 ```
-Bubble/BubbleVPN/bin/Release/net8.0-windows/
-├── BubbleVPN.exe          (Optimized executable)
-├── BubbleVPN.dll
-├── BubbleVPN.deps.json
-├── BubbleVPN.runtimeconfig.json
+Bubble/BubbleBUBBL/bin/Release/net8.0-windows/
+├── BubbleBUBBL.exe          (Optimized executable)
+├── BubbleBUBBL.dll
+├── BubbleBUBBL.deps.json
+├── BubbleBUBBL.runtimeconfig.json
 └── runtimes/              (WebView2 files)
 ```
 
@@ -170,8 +170,8 @@ dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true
 
 **Output location:**
 ```
-Bubble/BubbleVPN/bin/Release/net8.0-windows/win-x64/publish/
-└── BubbleVPN.exe (Self-contained, ~100 MB)
+Bubble/BubbleBUBBL/bin/Release/net8.0-windows/win-x64/publish/
+└── BubbleBUBBL.exe (Self-contained, ~100 MB)
 ```
 
 **For 32-bit Windows:**
@@ -188,8 +188,8 @@ dotnet publish -c Release -r win-x64 --no-self-contained
 
 **Output:**
 ```
-Bubble/BubbleVPN/bin/Release/net8.0-windows/win-x64/publish/
-└── BubbleVPN.exe (~5 MB, requires .NET 8.0 Runtime)
+Bubble/BubbleBUBBL/bin/Release/net8.0-windows/win-x64/publish/
+└── BubbleBUBBL.exe (~5 MB, requires .NET 8.0 Runtime)
 ```
 
 ## Build Configurations Explained
@@ -360,19 +360,19 @@ steps:
 
 1. **Executable exists**
    - Navigate to output folder
-   - Confirm `BubbleVPN.exe` is present
+   - Confirm `BubbleBUBBL.exe` is present
 
 2. **Dependencies included**
    - Check for WebView2 runtime files
    - Verify .dll files present
 
 3. **Application runs**
-   - Double-click BubbleVPN.exe
+   - Double-click BubbleBUBBL.exe
    - Window should open
    - No error messages
 
 4. **Features work**
-   - VPN button clickable
+   - BUBBL button clickable
    - Browser loads pages
    - System tray icon appears
 
@@ -380,7 +380,7 @@ steps:
 
 After successful build:
 1. Run the application (F5 in Visual Studio)
-2. Test VPN functionality
+2. Test BUBBL functionality
 3. Browse some websites
 4. Check system tray integration
 5. Try minimizing and restoring
@@ -405,11 +405,11 @@ If build fails:
 ✅ Build succeeded (0 errors)  
 ✅ Executable created  
 ✅ Application launches  
-✅ VPN toggle works  
+✅ BUBBL toggle works  
 ✅ Browser loads pages  
 ✅ System tray icon appears  
 
-**You're ready to use Bubble VPN Browser!** 🎉
+**You're ready to use Bubble BUBBL Browser!** 🎉
 
 ---
 

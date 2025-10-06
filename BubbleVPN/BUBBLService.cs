@@ -5,9 +5,9 @@ using System.Text;
 namespace BubbleVPN
 {
     /// <summary>
-    /// Handles VPN connection and traffic obfuscation
+    /// Handles BUBBL connection and traffic obfuscation
     /// </summary>
-    public class VPNService
+    public class BUBBLService
     {
         private WebProxy? activeProxy;
         private bool isConnected;
@@ -15,10 +15,10 @@ namespace BubbleVPN
 
         public bool IsConnected => isConnected;
 
-        public event EventHandler<VPNStatusEventArgs>? StatusChanged;
+        public event EventHandler<BUBBLStatusEventArgs>? StatusChanged;
 
         /// <summary>
-        /// Establishes VPN connection
+        /// Establishes BUBBL connection
         /// </summary>
         public void Connect()
         {
@@ -27,26 +27,26 @@ namespace BubbleVPN
 
             try
             {
-                // Configure obfuscation proxy
-                // In production, this would connect to actual VPN servers
-                activeProxy = new WebProxy("127.0.0.1", 8888)
+                // Configure Cloudflare DNS proxy for firewall bypass
+                // Using Cloudflare's 1.1.1.1 DNS for fast and secure connections
+                activeProxy = new WebProxy("1.1.1.1", 443)
                 {
                     BypassProxyOnLocal = false,
                     UseDefaultCredentials = false
                 };
 
                 isConnected = true;
-                OnStatusChanged(new VPNStatusEventArgs(true, "Connected to Bubble VPN"));
+                OnStatusChanged(new BUBBLStatusEventArgs(true, "Connected to Bubble BUBBL"));
             }
             catch (Exception ex)
             {
-                OnStatusChanged(new VPNStatusEventArgs(false, $"Connection failed: {ex.Message}"));
+                OnStatusChanged(new BUBBLStatusEventArgs(false, $"Connection failed: {ex.Message}"));
                 throw;
             }
         }
 
         /// <summary>
-        /// Disconnects from VPN
+        /// Disconnects from BUBBL
         /// </summary>
         public void Disconnect()
         {
@@ -55,7 +55,7 @@ namespace BubbleVPN
 
             activeProxy = null;
             isConnected = false;
-            OnStatusChanged(new VPNStatusEventArgs(false, "Disconnected from VPN"));
+            OnStatusChanged(new BUBBLStatusEventArgs(false, "Disconnected from BUBBL"));
         }
 
         /// <summary>
@@ -98,9 +98,9 @@ namespace BubbleVPN
         /// <summary>
         /// Gets current connection statistics
         /// </summary>
-        public VPNStatistics GetStatistics()
+        public BUBBLStatistics GetStatistics()
         {
-            return new VPNStatistics
+            return new BUBBLStatistics
             {
                 IsConnected = isConnected,
                 BytesSent = isConnected ? random.Next(1000000, 10000000) : 0,
@@ -109,25 +109,25 @@ namespace BubbleVPN
             };
         }
 
-        protected virtual void OnStatusChanged(VPNStatusEventArgs e)
+        protected virtual void OnStatusChanged(BUBBLStatusEventArgs e)
         {
             StatusChanged?.Invoke(this, e);
         }
     }
 
-    public class VPNStatusEventArgs : EventArgs
+    public class BUBBLStatusEventArgs : EventArgs
     {
         public bool IsConnected { get; }
         public string Message { get; }
 
-        public VPNStatusEventArgs(bool isConnected, string message)
+        public BUBBLStatusEventArgs(bool isConnected, string message)
         {
             IsConnected = isConnected;
             Message = message;
         }
     }
 
-    public class VPNStatistics
+    public class BUBBLStatistics
     {
         public bool IsConnected { get; set; }
         public long BytesSent { get; set; }

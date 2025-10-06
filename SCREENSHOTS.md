@@ -1,4 +1,4 @@
-# Bubble VPN Browser - Screenshot Guide
+# Bubble BUBBL Browser - Screenshot Guide
 
 This document describes what the application looks like when running on Windows with Visual Studio 2022.
 
@@ -9,7 +9,7 @@ When you open `Bubble.sln` in Visual Studio 2022, you will see:
 
 ```
 Solution 'Bubble' (1 of 1 project)
-└── BubbleVPN
+└── BubbleBUBBL
     ├── Dependencies
     │   ├── Frameworks
     │   │   └── Microsoft.WindowsDesktop.App.WindowsForms
@@ -19,7 +19,7 @@ Solution 'Bubble' (1 of 1 project)
     │   └── launchSettings.json
     ├── MainForm.cs
     ├── Program.cs
-    └── VPNService.cs
+    └── BUBBLService.cs
 ```
 
 ### Visual Studio Toolbar
@@ -29,18 +29,18 @@ Solution 'Bubble' (1 of 1 project)
 
 ## Running the Application
 
-### 1. Initial Launch (VPN Disconnected)
+### 1. Initial Launch (BUBBL Disconnected)
 
 **Window Appearance:**
-- Title: "Bubble VPN Browser"
+- Title: "Bubble BUBBL Browser"
 - Size: 1200x800 pixels
 - Icon: Windows shield icon
 
 **Status Bar (Top):**
 - Background: Dark gray (#2D2D30)
-- Left side: "VPN: DISCONNECTED" in orange-red
+- Left side: "BUBBL: DISCONNECTED" in orange-red
 - Below that: "Ready to connect" in light gray
-- Right side: Blue button "🛡️ Enable VPN"
+- Right side: Blue button "🛡️ Enable BUBBL"
 
 **Navigation Bar:**
 - Background: Darker gray (#252526)
@@ -55,18 +55,18 @@ Solution 'Bubble' (1 of 1 project)
 
 **System Tray:**
 - Shield icon appears in Windows system tray
-- Tooltip: "Bubble VPN Browser - Disconnected"
+- Tooltip: "Bubble BUBBL Browser - Disconnected"
 
-### 2. Enabling VPN
+### 2. Enabling BUBBL
 
-**Action:** Click "🛡️ Enable VPN" button
+**Action:** Click "🛡️ Enable BUBBL" button
 
 **Confirmation Dialog Appears:**
 ```
 ┌────────────────────────────────────┐
-│ ℹ VPN Connected                    │
+│ ℹ BUBBL Connected                    │
 ├────────────────────────────────────┤
-│ VPN Enabled!                        │
+│ BUBBL Enabled!                        │
 │                                     │
 │ ✓ Traffic Obfuscation: Active      │
 │ ✓ Firewall Bypass: Enabled         │
@@ -82,18 +82,18 @@ Solution 'Bubble' (1 of 1 project)
 
 **Status Bar Changes:**
 - Background: Dark green (#004000)
-- Status text: "VPN: CONNECTED ✓" in lime green
+- Status text: "BUBBL: CONNECTED ✓" in lime green
 - Statistics appear: "↑ 2.5 MB | ↓ 5.3 MB | ⏱ 05:23" in light gray
-- Button changes to: "🛡️ Disable VPN" in orange-red
+- Button changes to: "🛡️ Disable BUBBL" in orange-red
 
 **System Tray:**
-- Balloon notification appears: "VPN Connected - Connected to Bubble VPN"
-- Tooltip updates: "Bubble VPN Browser - Connected"
+- Balloon notification appears: "BUBBL Connected - Connected to Bubble BUBBL"
+- Tooltip updates: "Bubble BUBBL Browser - Connected"
 
-### 3. Browsing with VPN Active
+### 3. Browsing with BUBBL Active
 
 **What You See:**
-- Green status bar indicates VPN is active
+- Green status bar indicates BUBBL is active
 - Statistics update every 2 seconds
 - Upload/download counters increase
 - Connection timer counts up
@@ -110,10 +110,10 @@ Solution 'Bubble' (1 of 1 project)
 **Right-click tray icon shows menu:**
 ```
 ┌─────────────────────┐
-│ 🛡️ Bubble VPN       │
+│ 🛡️ Bubble BUBBL       │
 ├─────────────────────┤
 │ Show                │
-│ Toggle VPN          │
+│ Toggle BUBBL          │
 │ ─────────────       │
 │ Exit                │
 └─────────────────────┘
@@ -121,7 +121,7 @@ Solution 'Bubble' (1 of 1 project)
 
 **Menu Actions:**
 - **Show**: Restores window if minimized
-- **Toggle VPN**: Switches VPN on/off without opening window
+- **Toggle BUBBL**: Switches BUBBL on/off without opening window
 - **Exit**: Closes application completely
 
 ### 5. Minimizing to Tray
@@ -138,15 +138,15 @@ Solution 'Bubble' (1 of 1 project)
 - Double-click tray icon, OR
 - Right-click tray icon → "Show"
 
-### 6. Disabling VPN
+### 6. Disabling BUBBL
 
-**Action:** Click "🛡️ Disable VPN" button
+**Action:** Click "🛡️ Disable BUBBL" button
 
 **Result:**
 - Status bar returns to gray (#2D2D30)
-- Status text: "VPN: DISCONNECTED" in orange-red
+- Status text: "BUBBL: DISCONNECTED" in orange-red
 - Statistics disappear, replaced with "Ready to connect"
-- Button changes back to: "🛡️ Enable VPN" in blue
+- Button changes back to: "🛡️ Enable BUBBL" in blue
 
 ## Visual Studio Debugging View
 
@@ -165,7 +165,7 @@ Solution 'Bubble' (1 of 1 project)
 ### Debug Output Examples
 
 ```
-The program '[12345] BubbleVPN.exe' has exited with code 0 (0x0).
+The program '[12345] BubbleBUBBL.exe' has exited with code 0 (0x0).
 ```
 
 ## UI Details and Measurements
@@ -192,7 +192,7 @@ The program '[12345] BubbleVPN.exe' has exited with code 0 (0x0).
 
 - **Status Label**: Segoe UI, 12pt, Bold
 - **Stats Label**: Segoe UI, 9pt, Regular
-- **VPN Button**: Segoe UI, 11pt, Bold
+- **BUBBL Button**: Segoe UI, 11pt, Bold
 - **URL Box**: Segoe UI, 11pt, Regular
 - **Nav Buttons**: Segoe UI, 10pt, Regular
 
@@ -201,7 +201,7 @@ The program '[12345] BubbleVPN.exe' has exited with code 0 (0x0).
 - **Window**: 1200×800 pixels (minimum 800×600)
 - **Status Panel**: Full width × 80 pixels height
 - **Navigation Bar**: Full width × 50 pixels height
-- **VPN Toggle Button**: 160×50 pixels
+- **BUBBL Toggle Button**: 160×50 pixels
 - **Navigation Buttons**: 40×30 pixels each
 - **Go Button**: 70×30 pixels
 
@@ -250,10 +250,10 @@ The application uses a dark theme that:
 
 | State | Status Bar | Button Text | Button Color |
 |-------|------------|-------------|--------------|
-| Disconnected | Gray | Enable VPN | Blue |
-| Connecting | Gray→Green | Enable VPN | Blue |
-| Connected | Green | Disable VPN | Red |
-| Disconnecting | Green→Gray | Disable VPN | Red→Blue |
+| Disconnected | Gray | Enable BUBBL | Blue |
+| Connecting | Gray→Green | Enable BUBBL | Blue |
+| Connected | Green | Disable BUBBL | Red |
+| Disconnecting | Green→Gray | Disable BUBBL | Red→Blue |
 
 ## Error States
 
@@ -297,7 +297,7 @@ The application uses a dark theme that:
 
 **Smooth Operation:**
 - No lag when clicking buttons
-- Instant VPN toggle
+- Instant BUBBL toggle
 - Fast page loads
 - Responsive UI
 

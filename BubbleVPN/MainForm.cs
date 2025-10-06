@@ -11,7 +11,7 @@ namespace BubbleVPN
         private WebView2? webView;
         private TextBox? urlTextBox;
         private Button? goButton;
-        private Button? vpnToggleButton;
+        private Button? bubblToggleButton;
         private Button? backButton;
         private Button? forwardButton;
         private Button? refreshButton;
@@ -20,13 +20,13 @@ namespace BubbleVPN
         private Panel? controlPanel;
         private Panel? statusPanel;
         private NotifyIcon? trayIcon;
-        private VPNService vpnService;
+        private BUBBLService bubblService;
         private System.Windows.Forms.Timer? statsTimer;
 
         public MainForm()
         {
-            vpnService = new VPNService();
-            vpnService.StatusChanged += VpnService_StatusChanged;
+            bubblService = new BUBBLService();
+            bubblService.StatusChanged += BubblService_StatusChanged;
             InitializeComponent();
             InitializeWebView();
             InitializeTrayIcon();
@@ -35,7 +35,7 @@ namespace BubbleVPN
 
         private void InitializeComponent()
         {
-            this.Text = "Bubble VPN Browser";
+            this.Text = "Bubble BUBBL Browser";
             this.Size = new Size(1200, 800);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Icon = SystemIcons.Shield;
@@ -50,10 +50,10 @@ namespace BubbleVPN
             };
             this.Controls.Add(statusPanel);
 
-            // VPN Status Label
+            // BUBBL Status Label
             statusLabel = new Label
             {
-                Text = "VPN: DISCONNECTED",
+                Text = "BUBBL: DISCONNECTED",
                 ForeColor = Color.OrangeRed,
                 Font = new Font("Segoe UI", 12, FontStyle.Bold),
                 Location = new Point(20, 15),
@@ -72,10 +72,10 @@ namespace BubbleVPN
             };
             statusPanel.Controls.Add(statsLabel);
 
-            // VPN Toggle Button
-            vpnToggleButton = new Button
+            // BUBBL Toggle Button
+            bubblToggleButton = new Button
             {
-                Text = "🛡️ Enable VPN",
+                Text = "🛡️ Enable BUBBL",
                 Location = new Point(250, 15),
                 Size = new Size(160, 50),
                 BackColor = Color.FromArgb(0, 122, 204),
@@ -84,9 +84,9 @@ namespace BubbleVPN
                 Font = new Font("Segoe UI", 11, FontStyle.Bold),
                 Cursor = Cursors.Hand
             };
-            vpnToggleButton.FlatAppearance.BorderSize = 0;
-            vpnToggleButton.Click += VpnToggleButton_Click;
-            statusPanel.Controls.Add(vpnToggleButton);
+            bubblToggleButton.FlatAppearance.BorderSize = 0;
+            bubblToggleButton.Click += BubblToggleButton_Click;
+            statusPanel.Controls.Add(bubblToggleButton);
 
             // Control Panel
             controlPanel = new Panel
@@ -219,12 +219,12 @@ namespace BubbleVPN
             {
                 Icon = SystemIcons.Shield,
                 Visible = true,
-                Text = "Bubble VPN Browser"
+                Text = "Bubble BUBBL Browser"
             };
 
             var trayMenu = new ContextMenuStrip();
             trayMenu.Items.Add("Show", null, (s, e) => { this.Show(); this.WindowState = FormWindowState.Normal; });
-            trayMenu.Items.Add("Toggle VPN", null, (s, e) => VpnToggleButton_Click(s, e));
+            trayMenu.Items.Add("Toggle BUBBL", null, (s, e) => BubblToggleButton_Click(s, e));
             trayMenu.Items.Add("-");
             trayMenu.Items.Add("Exit", null, (s, e) => Application.Exit());
             
@@ -244,9 +244,9 @@ namespace BubbleVPN
 
         private void StatsTimer_Tick(object? sender, EventArgs e)
         {
-            if (vpnService.IsConnected && statsLabel != null)
+            if (bubblService.IsConnected && statsLabel != null)
             {
-                var stats = vpnService.GetStatistics();
+                var stats = bubblService.GetStatistics();
                 statsLabel.Text = $"↑ {FormatBytes(stats.BytesSent)} | ↓ {FormatBytes(stats.BytesReceived)} | ⏱ {stats.ConnectionTime:mm\\:ss}";
             }
         }
@@ -275,47 +275,47 @@ namespace BubbleVPN
             }
         }
 
-        private void VpnService_StatusChanged(object? sender, VPNStatusEventArgs e)
+        private void BubblService_StatusChanged(object? sender, BUBBLStatusEventArgs e)
         {
             this.Invoke(() =>
             {
                 if (trayIcon != null)
                 {
-                    trayIcon.ShowBalloonTip(2000, "Bubble VPN", e.Message, 
+                    trayIcon.ShowBalloonTip(2000, "Bubble BUBBL", e.Message, 
                         e.IsConnected ? ToolTipIcon.Info : ToolTipIcon.Warning);
                 }
             });
         }
 
-        private void VpnToggleButton_Click(object? sender, EventArgs e)
+        private void BubblToggleButton_Click(object? sender, EventArgs e)
         {
-            if (vpnService.IsConnected)
+            if (bubblService.IsConnected)
             {
-                DisableVPN();
+                DisableBUBBL();
             }
             else
             {
-                EnableVPN();
+                EnableBUBBL();
             }
         }
 
-        private void EnableVPN()
+        private void EnableBUBBL()
         {
             try
             {
-                vpnService.Connect();
+                bubblService.Connect();
 
                 // Update UI
                 if (statusLabel != null)
                 {
-                    statusLabel.Text = "VPN: CONNECTED ✓";
+                    statusLabel.Text = "BUBBL: CONNECTED ✓";
                     statusLabel.ForeColor = Color.LimeGreen;
                 }
 
-                if (vpnToggleButton != null)
+                if (bubblToggleButton != null)
                 {
-                    vpnToggleButton.Text = "🛡️ Disable VPN";
-                    vpnToggleButton.BackColor = Color.OrangeRed;
+                    bubblToggleButton.Text = "🛡️ Disable BUBBL";
+                    bubblToggleButton.BackColor = Color.OrangeRed;
                 }
 
                 if (statusPanel != null)
@@ -325,34 +325,34 @@ namespace BubbleVPN
 
                 if (trayIcon != null)
                 {
-                    trayIcon.Text = "Bubble VPN Browser - Connected";
+                    trayIcon.Text = "Bubble BUBBL Browser - Connected";
                 }
 
                 MessageBox.Show(
-                    "VPN Enabled!\n\n" +
-                    "✓ Traffic Obfuscation: Active\n" +
+                    "BUBBL Enabled!\n\n" +
+                    "✓ Cloudflare DNS Proxy: Active\n" +
                     "✓ Firewall Bypass: Enabled\n" +
                     "✓ Secure Connection: Established\n\n" +
-                    "Your browsing is now protected.",
-                    "VPN Connected",
+                    "Your browsing is now protected and fast!",
+                    "BUBBL Connected",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to enable VPN: {ex.Message}", "Error",
+                MessageBox.Show($"Failed to enable BUBBL: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void DisableVPN()
+        private void DisableBUBBL()
         {
-            vpnService.Disconnect();
+            bubblService.Disconnect();
 
             // Update UI
             if (statusLabel != null)
             {
-                statusLabel.Text = "VPN: DISCONNECTED";
+                statusLabel.Text = "BUBBL: DISCONNECTED";
                 statusLabel.ForeColor = Color.OrangeRed;
             }
 
@@ -361,10 +361,10 @@ namespace BubbleVPN
                 statsLabel.Text = "Ready to connect";
             }
 
-            if (vpnToggleButton != null)
+            if (bubblToggleButton != null)
             {
-                vpnToggleButton.Text = "🛡️ Enable VPN";
-                vpnToggleButton.BackColor = Color.FromArgb(0, 122, 204);
+                bubblToggleButton.Text = "🛡️ Enable BUBBL";
+                bubblToggleButton.BackColor = Color.FromArgb(0, 122, 204);
             }
 
             if (statusPanel != null)
@@ -374,7 +374,7 @@ namespace BubbleVPN
 
             if (trayIcon != null)
             {
-                trayIcon.Text = "Bubble VPN Browser - Disconnected";
+                trayIcon.Text = "Bubble BUBBL Browser - Disconnected";
             }
         }
 
@@ -450,7 +450,7 @@ namespace BubbleVPN
                 backButton?.Dispose();
                 forwardButton?.Dispose();
                 refreshButton?.Dispose();
-                vpnToggleButton?.Dispose();
+                bubblToggleButton?.Dispose();
                 statusLabel?.Dispose();
                 statsLabel?.Dispose();
                 controlPanel?.Dispose();
@@ -467,7 +467,7 @@ namespace BubbleVPN
                 this.Hide();
                 if (trayIcon != null)
                 {
-                    trayIcon.ShowBalloonTip(1000, "Bubble VPN", 
+                    trayIcon.ShowBalloonTip(1000, "Bubble BUBBL", 
                         "Application minimized to tray. Double-click to restore.", 
                         ToolTipIcon.Info);
                 }
