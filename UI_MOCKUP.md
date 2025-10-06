@@ -1,15 +1,15 @@
-# Bubble VPN Browser - UI Mockup
+# Bubble BUBBL Browser - UI Mockup
 
 ## Main Window Layout
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│  Bubble VPN Browser                                              [_][□][X]│
+│  Bubble BUBBL Browser                                              [_][□][X]│
 ├─────────────────────────────────────────────────────────────────────────┤
 │  STATUS PANEL (Green when connected, Gray when disconnected)            │
 │  ┌─────────────────────────────────────────────────────────────────┐   │
-│  │  VPN: CONNECTED ✓                    ┌──────────────────────┐   │   │
-│  │  ↑ 2.5 MB | ↓ 5.3 MB | ⏱ 05:23      │  🛡️ Disable VPN    │   │   │
+│  │  BUBBL: CONNECTED ✓                    ┌──────────────────────┐   │   │
+│  │  ↑ 2.5 MB | ↓ 5.3 MB | ⏱ 05:23      │  🛡️ Disable BUBBL    │   │   │
 │  │                                       └──────────────────────┘   │   │
 │  └─────────────────────────────────────────────────────────────────┘   │
 ├─────────────────────────────────────────────────────────────────────────┤
@@ -38,8 +38,8 @@
 - **Background**: Dark green (#004000) when connected
 - **Height**: 80 pixels
 
-#### VPN Status Label
-- **Text**: "VPN: DISCONNECTED" or "VPN: CONNECTED ✓"
+#### BUBBL Status Label
+- **Text**: "BUBBL: DISCONNECTED" or "BUBBL: CONNECTED ✓"
 - **Color**: Orange-red when disconnected, Lime green when connected
 - **Font**: Segoe UI, 12pt, Bold
 
@@ -47,10 +47,10 @@
 - **Text**: "↑ [sent] | ↓ [received] | ⏱ [time]"
 - **Color**: Light gray
 - **Font**: Segoe UI, 9pt
-- **Visible**: Only when VPN is connected
+- **Visible**: Only when BUBBL is connected
 
-#### VPN Toggle Button
-- **Text**: "🛡️ Enable VPN" or "🛡️ Disable VPN"
+#### BUBBL Toggle Button
+- **Text**: "🛡️ Enable BUBBL" or "🛡️ Disable BUBBL"
 - **Color**: Blue (#007ACC) when disconnected, Orange-red when connected
 - **Size**: 160x50 pixels
 - **Font**: Segoe UI, 11pt, Bold
@@ -109,10 +109,10 @@ Active Button: #007ACC (Blue)
 
 ```
 ┌─────────────────────────┐
-│   🛡️ Bubble VPN        │
+│   🛡️ Bubble BUBBL        │
 ├─────────────────────────┤
 │   Show                  │
-│   Toggle VPN            │
+│   Toggle BUBBL            │
 │   ──────────────────    │
 │   Exit                  │
 └─────────────────────────┘
@@ -120,17 +120,17 @@ Active Button: #007ACC (Blue)
 
 ### States
 - **Icon**: Shield (🛡️)
-- **Tooltip**: "Bubble VPN Browser - Connected" or "- Disconnected"
+- **Tooltip**: "Bubble BUBBL Browser - Connected" or "- Disconnected"
 - **Notifications**: Shows balloon tips for status changes
 
 ## Dialog Boxes
 
-### VPN Connected Dialog
+### BUBBL Connected Dialog
 ```
 ┌──────────────────────────────────────┐
-│  ℹ VPN Connected                     │
+│  ℹ BUBBL Connected                     │
 ├──────────────────────────────────────┤
-│  VPN Enabled!                         │
+│  BUBBL Enabled!                         │
 │                                       │
 │  ✓ Traffic Obfuscation: Active       │
 │  ✓ Firewall Bypass: Enabled          │
@@ -203,26 +203,26 @@ Active Button: #007ACC (Blue)
 
 ### Starting the Application
 1. Launch from Visual Studio 2022 or executable
-2. Window opens with VPN disconnected
+2. Window opens with BUBBL disconnected
 3. Browser loads Google.com
 4. User can browse normally
 
-### Enabling VPN
-1. Click "🛡️ Enable VPN" button
+### Enabling BUBBL
+1. Click "🛡️ Enable BUBBL" button
 2. Status panel turns green
 3. Confirmation dialog appears
 4. Statistics begin updating
-5. VPN is now active
+5. BUBBL is now active
 
-### Browsing with VPN
+### Browsing with BUBBL
 1. Enter URL in address bar
 2. Press Enter or click Go
 3. Traffic is obfuscated
 4. Statistics update in real-time
 5. Browse securely
 
-### Disabling VPN
-1. Click "🛡️ Disable VPN" button
+### Disabling BUBBL
+1. Click "🛡️ Disable BUBBL" button
 2. Status panel returns to gray
 3. Statistics stop updating
 4. Normal browsing resumes
@@ -256,4 +256,4 @@ Active Button: #007ACC (Blue)
 
 ---
 
-This mockup represents the user interface design for the Bubble VPN Browser as implemented in the code.
+This mockup represents the user interface design for the Bubble BUBBL Browser as implemented in the code.

@@ -1,11 +1,12 @@
-# Bubble VPN Browser
+# Bubble BUBBL Browser
 
-A secure VPN-enabled web browser for Windows, designed to run directly from Visual Studio 2022.
+A secure BUBBL-enabled web browser for Windows, designed to run directly from Visual Studio 2022.
 
 ## Features
 
-- **Built-in VPN Functionality**: Toggle VPN connection on/off with a single click
-- **Traffic Obfuscation**: Obfuscates all network traffic when VPN is enabled
+- **Built-in BUBBL Functionality**: Toggle BUBBL connection on/off with a single click
+- **Traffic Obfuscation**: Obfuscates all network traffic when BUBBL is enabled
+- **Cloudflare DNS Proxy**: Uses Cloudflare's 1.1.1.1 DNS for fast and secure firewall bypass
 - **Firewall Bypass**: Designed to work around restrictive firewalls
 - **Modern Web Browser**: Uses Microsoft Edge WebView2 for full browser capabilities
 - **Clean UI**: Simple, intuitive interface with status indicators
@@ -29,19 +30,20 @@ A secure VPN-enabled web browser for Windows, designed to run directly from Visu
 ### Using the Application
 
 1. **Start the Browser**: Launch the application from Visual Studio
-2. **Enable VPN**: Click the "Enable VPN" button in the top bar
-3. **Browse Securely**: Enter URLs in the address bar and browse with VPN protection
-4. **Monitor Status**: The status bar shows your current VPN connection state
-5. **Disable VPN**: Click the "Disable VPN" button when you want to disconnect
+2. **Enable BUBBL**: Click the "Enable BUBBL" button in the top bar
+3. **Browse Securely**: Enter URLs in the address bar and browse with BUBBL protection
+4. **Monitor Status**: The status bar shows your current BUBBL connection state
+5. **Disable BUBBL**: Click the "Disable BUBBL" button when you want to disconnect
 
 ## How It Works
 
-The Bubble VPN Browser combines a modern web browser (using WebView2) with VPN capabilities:
+The Bubble BUBBL Browser combines a modern web browser (using WebView2) with BUBBL capabilities:
 
 - **WebView2 Integration**: Provides a full-featured Chromium-based browser
-- **Proxy Configuration**: Routes traffic through an obfuscation layer when VPN is enabled
+- **Cloudflare DNS Proxy**: Routes traffic through Cloudflare's 1.1.1.1 DNS proxy for firewall bypass
+- **Proxy Configuration**: Routes traffic through an obfuscation layer when BUBBL is enabled
 - **Secure by Design**: Implements traffic encryption and obfuscation techniques
-- **User-Friendly Controls**: Toggle VPN on/off without complex configuration
+- **User-Friendly Controls**: Toggle BUBBL on/off without complex configuration
 
 ## Project Structure
 
@@ -51,7 +53,7 @@ Bubble/
 ├── BubbleVPN/
 │   ├── BubbleVPN.csproj       # Project file
 │   ├── Program.cs             # Application entry point
-│   └── MainForm.cs            # Main browser window with VPN controls
+│   └── MainForm.cs            # Main browser window with BUBBL controls
 └── README.md                  # This file
 ```
 
@@ -66,7 +68,7 @@ dotnet run --project BubbleVPN
 
 ## Security Notice
 
-This VPN browser provides a layer of traffic obfuscation and proxy routing. For production use, ensure you're connecting to trusted VPN servers and using proper encryption protocols.
+This BUBBL browser provides a layer of traffic obfuscation and proxy routing through Cloudflare DNS. For production use, ensure you're using proper encryption protocols and HTTPS connections.
 
 ## License
 

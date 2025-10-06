@@ -1,10 +1,10 @@
-# Bubble VPN Browser - Feature List
+# Bubble BUBBL Browser - Feature List
 
 ## Core Features
 
-### 🛡️ VPN Functionality
-- **One-Click Toggle**: Enable/disable VPN with a single button click
-- **Traffic Obfuscation**: XOR-based data obfuscation when VPN is active
+### 🛡️ BUBBL Functionality
+- **One-Click Toggle**: Enable/disable BUBBL with a single button click
+- **Traffic Obfuscation**: XOR-based data obfuscation when BUBBL is active
 - **Proxy Configuration**: Automatic proxy setup for traffic routing
 - **Firewall Bypass**: Designed to work with restrictive network configurations
 - **Connection Management**: Robust connect/disconnect handling
@@ -21,17 +21,17 @@
 ### 🎨 User Interface
 - **Dark Theme**: Professional dark color scheme
 - **Responsive Design**: Adapts to window resizing
-- **Clear Status Indicators**: Color-coded VPN status
+- **Clear Status Indicators**: Color-coded BUBBL status
 - **Modern Controls**: Flat design with high contrast
 - **Intuitive Layout**: Familiar browser interface
 - **Professional Appearance**: Visual Studio 2022 style theme
 
 ### 📊 Statistics & Monitoring
 - **Real-Time Stats**: Live upload/download counters
-- **Connection Timer**: Shows how long VPN has been active
+- **Connection Timer**: Shows how long BUBBL has been active
 - **Data Formatting**: Human-readable byte counts (KB, MB, GB)
 - **Auto-Update**: Statistics refresh every 2 seconds
-- **Visual Feedback**: Stats only shown when VPN is active
+- **Visual Feedback**: Stats only shown when BUBBL is active
 
 ### 🔔 System Integration
 - **System Tray Support**: Minimize to tray functionality
@@ -64,11 +64,11 @@
 - **Proxy Routing**: All traffic routed through configured proxy
 - **Secure Defaults**: HTTPS automatically added to URLs
 - **Connection Security**: Secure WebView2 implementation
-- **Privacy Mode**: VPN masks direct connections
+- **Privacy Mode**: BUBBL masks direct connections
 
-### VPN Security
+### BUBBL Security
 - **Encrypted Communication**: Data obfuscation layer
-- **Connection Isolation**: Separate VPN and normal browsing modes
+- **Connection Isolation**: Separate BUBBL and normal browsing modes
 - **Status Verification**: Clear indication of protection status
 - **Automatic Disconnect**: Clean shutdown handling
 
@@ -83,7 +83,7 @@
 
 ### Code Architecture
 - **Clean Separation**: UI and business logic separated
-- **Service Pattern**: VPNService handles all VPN operations
+- **Service Pattern**: BUBBLService handles all BUBBL operations
 - **Event-Driven**: Status updates via event handlers
 - **Async/Await**: Proper asynchronous operations
 - **IDisposable**: Correct resource management
@@ -91,8 +91,8 @@
 
 ### Extensibility
 - **Modular Design**: Easy to add new features
-- **Service-Based**: VPNService can be enhanced
-- **Event System**: Subscribe to VPN status changes
+- **Service-Based**: BUBBLService can be enhanced
+- **Event System**: Subscribe to BUBBL status changes
 - **Configurable**: Settings can be added easily
 
 ## Platform Features
@@ -123,7 +123,7 @@
 ### Workflow
 - **Quick Access**: System tray for instant access
 - **Stay-Resident**: Minimizes instead of closing
-- **Fast Toggle**: Instant VPN on/off switching
+- **Fast Toggle**: Instant BUBBL on/off switching
 - **Persistent State**: Remembers window size/position
 - **Multi-Tasking**: Works alongside other applications
 
@@ -156,9 +156,9 @@
 - **Local Storage**: Web storage APIs supported
 - **Dev Tools**: Chromium DevTools integration
 
-### VPN Capabilities
+### BUBBL Capabilities
 - **Configurable Proxy**: Proxy settings can be customized
-- **Multiple Protocols**: Extensible to support various VPN protocols
+- **Multiple Protocols**: Extensible to support various BUBBL protocols
 - **Server Selection**: Framework for server selection (can be added)
 - **Connection Pooling**: Multiple simultaneous connections possible
 
@@ -172,7 +172,7 @@
 ## Future Enhancement Possibilities
 
 ### Potential Features
-- Multiple VPN server locations
+- Multiple BUBBL server locations
 - Connection speed testing
 - Advanced statistics (graphs, history)
 - Bookmarks and favorites
@@ -191,7 +191,7 @@
 
 ### Technical Improvements
 - Stronger encryption (AES-256)
-- Real VPN protocol support (OpenVPN, WireGuard)
+- Real BUBBL protocol support (OpenBUBBL, WireGuard)
 - DNS leak protection
 - IPv6 support
 - Certificate pinning
@@ -255,9 +255,9 @@
 
 ## Summary
 
-Bubble VPN Browser provides:
+Bubble BUBBL Browser provides:
 ✅ Full-featured web browser  
-✅ Built-in VPN functionality  
+✅ Built-in BUBBL functionality  
 ✅ Professional UI  
 ✅ System tray integration  
 ✅ Real-time monitoring  
@@ -268,13 +268,13 @@ Bubble VPN Browser provides:
 ✅ Production ready  
 
 Perfect for:
-- Developers who need a VPN browser
+- Developers who need a BUBBL browser
 - Users behind restrictive firewalls
 - Privacy-conscious browsing
 - Learning WinForms and WebView2
 - Building custom browser solutions
 - Educational purposes
-- Quick VPN prototyping
+- Quick BUBBL prototyping
 
 ---
 

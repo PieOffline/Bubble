@@ -1,10 +1,10 @@
-# Bubble VPN Browser - User Guide
+# Bubble BUBBL Browser - User Guide
 
 ## Table of Contents
 1. [Installation](#installation)
 2. [Getting Started](#getting-started)
 3. [Features](#features)
-4. [Using the VPN](#using-the-vpn)
+4. [Using the BUBBL](#using-the-bubbl)
 5. [Browser Controls](#browser-controls)
 6. [System Tray](#system-tray)
 7. [Troubleshooting](#troubleshooting)
@@ -25,22 +25,22 @@
 
 ## Getting Started
 
-When you first launch Bubble VPN Browser, you'll see:
+When you first launch Bubble BUBBL Browser, you'll see:
 
-- **Status Bar** (top): Shows VPN connection status
+- **Status Bar** (top): Shows BUBBL connection status
 - **Navigation Bar**: Contains browser controls and URL bar
 - **Main Browser**: WebView2-powered browser window
 
 ### First Launch
 1. The browser will automatically navigate to Google
-2. VPN will be **disabled** by default
+2. BUBBL will be **disabled** by default
 3. The application will minimize to the system tray when closed
 
 ## Features
 
-### 🛡️ VPN Protection
-- **One-Click Enable/Disable**: Toggle VPN with a single button click
-- **Traffic Obfuscation**: All data is obfuscated when VPN is active
+### 🛡️ BUBBL Protection
+- **One-Click Enable/Disable**: Toggle BUBBL with a single button click
+- **Traffic Obfuscation**: All data is obfuscated when BUBBL is active
 - **Firewall Bypass**: Designed to work around restrictive firewalls
 - **Real-time Statistics**: View data sent/received and connection time
 
@@ -55,32 +55,32 @@ When you first launch Bubble VPN Browser, you'll see:
 - **Quick Access**: Double-click tray icon to restore
 - **Context Menu**: Right-click for quick actions
 
-## Using the VPN
+## Using the BUBBL
 
-### Enabling VPN
-1. Click the **"🛡️ Enable VPN"** button in the status bar
+### Enabling BUBBL
+1. Click the **"🛡️ Enable BUBBL"** button in the status bar
 2. Wait for connection confirmation dialog
-3. Status changes to **"VPN: CONNECTED ✓"** in green
+3. Status changes to **"BUBBL: CONNECTED ✓"** in green
 4. Statistics begin updating every 2 seconds
 
-### What Happens When VPN is Enabled
+### What Happens When BUBBL is Enabled
 - Traffic obfuscation activates
 - Proxy configuration applies
 - Status bar turns green
 - System tray icon updates
 - Real-time statistics display
 
-### Disabling VPN
-1. Click the **"🛡️ Disable VPN"** button
-2. Status changes to **"VPN: DISCONNECTED"**
+### Disabling BUBBL
+1. Click the **"🛡️ Disable BUBBL"** button
+2. Status changes to **"BUBBL: DISCONNECTED"**
 3. Status bar turns back to default color
 4. Statistics stop updating
 
-### VPN Status Indicators
+### BUBBL Status Indicators
 | Status | Color | Meaning |
 |--------|-------|---------|
-| DISCONNECTED | Red/Orange | VPN is off, normal browsing |
-| CONNECTED ✓ | Green | VPN is active, traffic protected |
+| DISCONNECTED | Red/Orange | BUBBL is off, normal browsing |
+| CONNECTED ✓ | Green | BUBBL is active, traffic protected |
 
 ## Browser Controls
 
@@ -110,12 +110,12 @@ Look for the shield icon (🛡️) in your Windows system tray (bottom-right cor
 - **Double-Click**: Restore the main window
 - **Right-Click Menu**:
   - **Show**: Restore the main window
-  - **Toggle VPN**: Enable/disable VPN without opening window
+  - **Toggle BUBBL**: Enable/disable BUBBL without opening window
   - **Exit**: Completely close the application
 
 ### Balloon Notifications
 The application shows notifications for:
-- VPN connection status changes
+- BUBBL connection status changes
 - Application minimized to tray
 - Important status updates
 
@@ -138,12 +138,12 @@ The application shows notifications for:
 3. Clean and rebuild the solution
 4. Check Windows Event Viewer for errors
 
-### VPN Connection Issues
-**Problem**: VPN won't enable
+### BUBBL Connection Issues
+**Problem**: BUBBL won't enable
 
 **Solution**:
 1. Check firewall settings
-2. Ensure no other VPN is running
+2. Ensure no other BUBBL is running
 3. Try running as Administrator
 4. Check the application logs
 
@@ -152,7 +152,7 @@ The application shows notifications for:
 
 **Solution**:
 1. Verify internet connection
-2. Try disabling VPN temporarily
+2. Try disabling BUBBL temporarily
 3. Clear WebView2 cache
 4. Check if website is accessible in other browsers
 
@@ -161,19 +161,20 @@ The application shows notifications for:
 
 **Solution**:
 1. Close unnecessary tabs/windows
-2. Disable VPN if not needed
+2. Disable BUBBL if not needed
 3. Clear browser cache
 4. Check system resources
 
 ## Advanced Configuration
 
 ### Proxy Settings
-The VPN uses a local proxy configuration. Default settings:
-- **Host**: 127.0.0.1
-- **Port**: 8888
+The BUBBL uses Cloudflare's DNS proxy for firewall bypass. Default settings:
+- **Host**: 1.1.1.1 (Cloudflare DNS)
+- **Port**: 443 (HTTPS)
+- **Benefits**: Fast, secure, and bypasses many organizational firewalls
 
 ### Data Obfuscation
-When VPN is enabled:
+When BUBBL is enabled:
 - XOR-based obfuscation (demonstration)
 - Real-time data encryption
 - Automatic key generation
@@ -214,11 +215,11 @@ Contributions are welcome! Please:
 4. Submit a pull request
 
 ## Version Information
-- **Application**: Bubble VPN Browser
+- **Application**: Bubble BUBBL Browser
 - **Version**: 1.0.0
 - **Framework**: .NET 8.0
 - **Platform**: Windows 10/11
 
 ---
 
-**Note**: This is a demonstration VPN browser. For production use, implement proper encryption protocols, secure VPN servers, and follow security best practices.
+**Note**: This is a demonstration BUBBL browser. For production use, implement proper encryption protocols, secure BUBBL servers, and follow security best practices.

@@ -1,4 +1,4 @@
-# Development Guide - Bubble VPN Browser
+# Development Guide - Bubble BUBBL Browser
 
 ## Visual Studio 2022 Setup
 
@@ -17,7 +17,7 @@ Bubble/
     ├── BubbleVPN.csproj    # Project configuration
     ├── Program.cs          # Application entry point
     ├── MainForm.cs         # Main UI form
-    ├── VPNService.cs       # VPN connection logic
+    ├── VPNService.cs       # BUBBL connection logic
     └── Properties/         # Project properties
         └── launchSettings.json
 ```
@@ -64,7 +64,7 @@ The project targets:
 ### MainForm.cs
 The primary UI component containing:
 - WebView2 browser control
-- VPN status panel
+- BUBBL status panel
 - Navigation controls
 - System tray integration
 - Event handlers
@@ -72,19 +72,19 @@ The primary UI component containing:
 **Key Methods**:
 - `InitializeComponent()`: Sets up UI elements
 - `InitializeWebView()`: Configures WebView2
-- `EnableVPN()`: Activates VPN connection
-- `DisableVPN()`: Deactivates VPN
+- `EnableBUBBL()`: Activates BUBBL connection
+- `DisableBUBBL()`: Deactivates BUBBL
 
-### VPNService.cs
-Handles VPN functionality:
+### BUBBLService.cs
+Handles BUBBL functionality:
 - Connection management
 - Data obfuscation
 - Statistics tracking
 - Status notifications
 
 **Key Methods**:
-- `Connect()`: Establishes VPN connection
-- `Disconnect()`: Closes VPN connection
+- `Connect()`: Establishes BUBBL connection
+- `Disconnect()`: Closes BUBBL connection
 - `ObfuscateData()`: Encrypts data
 - `GetStatistics()`: Returns connection stats
 
@@ -103,8 +103,8 @@ Application entry point:
 4. Add to appropriate container
 5. Wire up event handlers
 
-### Adding VPN Features
-1. Open `VPNService.cs`
+### Adding BUBBL Features
+1. Open `BUBBLService.cs`
 2. Add new method or property
 3. Update `MainForm.cs` to use new feature
 4. Test thoroughly
@@ -142,19 +142,19 @@ private void SettingsButton_Click(object? sender, EventArgs e)
 - [ ] WebView2 loads Google.com
 - [ ] URL bar accepts input
 - [ ] Navigation buttons work
-- [ ] VPN enables/disables correctly
+- [ ] BUBBL enables/disables correctly
 - [ ] Status updates properly
 - [ ] System tray functions work
-- [ ] Statistics update when VPN active
+- [ ] Statistics update when BUBBL active
 - [ ] Application minimizes to tray
 - [ ] Application restores from tray
 
-### Testing VPN Functionality
-1. Enable VPN
+### Testing BUBBL Functionality
+1. Enable BUBBL
 2. Verify status changes to green
 3. Check statistics update
 4. Browse to different websites
-5. Disable VPN
+5. Disable BUBBL
 6. Verify status returns to disconnected
 
 ### Testing UI Responsiveness
@@ -197,7 +197,7 @@ webView.CoreWebView2.Settings.AreDevToolsEnabled = true;
 ### Creating Executable
 1. Build in **Release** configuration
 2. Navigate to `bin/Release/net8.0-windows/`
-3. `BubbleVPN.exe` is ready to distribute
+3. `BubbleBUBBL.exe` is ready to distribute
 
 ### Publishing
 ```bash
